@@ -1,7 +1,7 @@
-const { bookType } = require("./bookType");
+const { drinkType } = require("./drinkType");
 const { authorType } = require("./authorType");
 
 module.exports = {
-  bookType,
+  drinkType,
   authorType
 };
