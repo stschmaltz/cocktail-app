@@ -2,6 +2,7 @@ const { gql } = require('apollo-server-express');
 
 const drinkType = gql`
   type Drink {
+    idDrink: String
     strDrink: String
     strCategory: String
     strAlcoholic: String

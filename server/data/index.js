@@ -8,14 +8,21 @@ class CocktailsApi extends RESTDataSource {
     this.baseURL = `https://www.thecocktaildb.com/api/json/${endpoint}`;
   }
 
-  // willSendRequest(request) {
-  //   console.log(request);
-  //   request.params.set("apikey", "1");
-  // }
+  async getDrinkById(id) {
+    const res = await this.get(`/lookup.php?i=${id}`);
+    return extractIngredients(res.drinks[0]);
+  }
+  async getDrinkByName(name) {
+    const res = await this.get(`/search.php?s=${name}`);
+    return extractIngredients(res.drinks[0]);
+  }
+  async getDrinksByLetter(letter) {
+    const res = await this.get(`/search.php?f=${letter}`);
+    return res.drinks.map(drink => extractIngredients(drink));
+  }
   async getRandomDrink() {
     const res = await this.get(`/random.php`);
-    const drink = extractIngredients(res.drinks[0]);
-    return drink;
+    return extractIngredients(res.drinks[0]);
   }
   async getRandomDrinks() {
     const res = await this.get(`/randomselection.php`);
@@ -27,6 +34,23 @@ class CocktailsApi extends RESTDataSource {
   }
   async getRecentDrinks() {
     const res = await this.get(`/recent.php`);
+    return res.drinks.map(drink => extractIngredients(drink));
+  }
+  async filterDrinksByIngredient(ingredient) {
+    const res = await this.get(`/filter.php?i=${ingredient}`);
+    return res.drinks.map(drink => extractIngredients(drink));
+  }
+  async filterDrinksByAlcoholic(alocoholic) {
+    const alocoholicString = alocoholic ? "Alcoholic" : "Non_Alcoholic";
+    const res = await this.get(`/filter.php?a=${alocoholicString}`);
+    return res.drinks.map(drink => extractIngredients(drink));
+  }
+  async filterDrinksByCategory(category) {
+    const res = await this.get(`/filter.php?c=${category}`);
+    return res.drinks.map(drink => extractIngredients(drink));
+  }
+  async filterDrinksByGlass(glass) {
+    const res = await this.get(`/filter.php?g=${glass}`);
     return res.drinks.map(drink => extractIngredients(drink));
   }
 }
