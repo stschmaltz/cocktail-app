@@ -1,9 +1,13 @@
-const { Drink } = require("../models");
-
 const drinksResolvers = {
   Query: {
-    random: async (_source, { id }, { dataSources }) =>
-      dataSources.cocktailsApi.getRandomDrink()
+    randomDrink: async (_source, { id }, { dataSources }) =>
+      dataSources.cocktailsApi.getRandomDrink(),
+    randomDrinks: async (_source, { id }, { dataSources }) =>
+      dataSources.cocktailsApi.getRandomDrinks(),
+    popularDrinks: async (_source, { id }, { dataSources }) =>
+      dataSources.cocktailsApi.getPopularDrinks(),
+    recentDrinks: async (_source, { id }, { dataSources }) =>
+      dataSources.cocktailsApi.getRecentDrinks()
   }
 };
 

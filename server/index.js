@@ -10,6 +10,7 @@ const { ApolloServer } = require("apollo-server-express");
 const { typeDefs } = require("./typeDefs");
 const { resolvers } = require("./resolvers");
 const { CocktailsApi } = require("./data/index");
+
 // Construct a schema, using GraphQL schema language
 const server = new ApolloServer({
   typeDefs,
@@ -21,8 +22,6 @@ const server = new ApolloServer({
   }
 });
 
-const client_id = process.env.CLIENT_ID; // Your client id
-const client_secret = process.env.CLIENT_SECRET; // Your secret
 const env = process.env.NODE_ENV || "development";
 const isProduction = env === "production";
 

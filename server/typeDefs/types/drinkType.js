@@ -4,6 +4,11 @@ const drinkType = gql`
   type Drink {
     strDrink: String
     strCategory: String
+    strAlcoholic: String
+    strGlass: String
+    strInstructions: String
+    strDrinkThumb: String
+    ingredients: [IngredientMeasure]
   }
 `;
 
