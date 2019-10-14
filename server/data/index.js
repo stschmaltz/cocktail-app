@@ -30,6 +30,7 @@ class CocktailsApi extends RESTDataSource {
   }
   async getPopularDrinks() {
     const res = await this.get(`/popular.php`);
+    console.log('yooooooo')
     return res.drinks.map(drink => extractIngredients(drink));
   }
   async getRecentDrinks() {

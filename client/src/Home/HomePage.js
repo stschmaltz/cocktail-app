@@ -7,8 +7,8 @@ import {
   GET_RANDOM_DRINKS
 } from "../Queries/drinks";
 import RecentDrinks from "./RecentDrinks";
-import RandomDrinks from "./RecentDrinks";
-import PopularDrinks from "./RecentDrinks";
+import RandomDrinks from "./RandomDrinks";
+import PopularDrinks from "./PopularDrinks";
 
 const HomePage = () => {
   return (

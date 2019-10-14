@@ -15,7 +15,7 @@ const PopularDrinks = props => {
   return (
     <div>
       <ul>
-        {data.recentDrinks.map(drink => (
+        {data.popularDrinks.map(drink => (
           <li>
             <h3>{drink.strDrink}</h3>
           </li>
