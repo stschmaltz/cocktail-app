@@ -2,12 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useQuery } from "@apollo/react-hooks";
 import {
-  GET_RECENT_DRINKS,
-  GET_POPULAR_DRINKS,
   GET_RANDOM_DRINKS
-} from "../Queries/drinks";
+} from "../../../queries/drinks";
 
-const RandomDrinks = props => {
+const RandomDrinksSection = props => {
   const { loading, error, data } = useQuery(GET_RANDOM_DRINKS);
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
@@ -25,6 +23,6 @@ const RandomDrinks = props => {
   );
 };
 
-RandomDrinks.propTypes = {};
+RandomDrinksSection.propTypes = {};
 
-export default RandomDrinks;
+export default RandomDrinksSection;

@@ -16,7 +16,31 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.page-content{
+  margin-top:60px;
+}
 .App-link {
   color: #09d3ac;
+}
+
+.shadow {
+  color: #fff;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  text-shadow:
+    -1px -1px 0 #222,
+    1px -1px 0 #222,
+    -1px 1px 0 #222,
+    2px 2px 0 #222,
+    3px 3px 0 #fff,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin:0;
+  text-align: center;
 }
