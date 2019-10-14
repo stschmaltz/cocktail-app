@@ -1,40 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
+import {
+  GET_RECENT_DRINKS,
+  GET_POPULAR_DRINKS,
+  GET_RANDOM_DRINKS
+} from "../Queries/drinks";
+import RecentDrinks from "./RecentDrinks";
+import RandomDrinks from "./RecentDrinks";
+import PopularDrinks from "./RecentDrinks";
 
-const GET_AUTHORS = gql`
-  {
-    authors {
-      name
-      books {
-        title
-      }
-    }
-  }
-`;
 const HomePage = () => {
-  const { loading, error, data } = useQuery(GET_AUTHORS);
-
-  if (loading) return "Loading...";
-  if (error) return `Error! ${error.message}`;
-  console.log(data);
   return (
     <div>
-      <ul>
-        {data.authors.map(author => (
-          <li>
-            <h3>{author.name}</h3>
-            <ul>
-              {author.books.map(book => (
-                <li>
-                  <h6>{book.title}</h6>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <h1>Popular Drinks</h1>
+        <PopularDrinks></PopularDrinks>
+      </div>
+      <div>
+        <h1>Random Drinks</h1>
+
+        <RandomDrinks></RandomDrinks>
+      </div>
+      <div>
+        <h1>Recently Added Drinks</h1>
+
+        <RecentDrinks></RecentDrinks>
+      </div>
     </div>
   );
 };

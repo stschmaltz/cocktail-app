@@ -13,6 +13,7 @@ const extractIngredients = drink => {
     })
     .filter(ingredient => ingredient);
   drink.ingredients = res;
+  drink.id = res.drinkId;
   return drink;
 };
 

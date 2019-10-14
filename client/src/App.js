@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./App.scss";
 import { ApolloProvider } from "@apollo/react-hooks";
 import HomePage from "./Home/HomePage";
 import ApolloClient from "apollo-boost";
@@ -9,15 +9,21 @@ const client = new ApolloClient({
   uri: "http://localhost:8888/graphql"
 });
 
-const App = () => (
+const App = () => {
+  
+  return (
   <ApolloProvider client={client}>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <HomePage />
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/about">yo</Route>
+        </Switch>
+      </div>
+    </Router>
   </ApolloProvider>
-);
+)};
 
 export default App;
