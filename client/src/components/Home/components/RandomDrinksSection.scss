@@ -1,0 +1,40 @@
+@import "../../../variables.scss";
+
+.random-drinks-section {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+
+  .random-drinks-header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .random-drinks-header-line {
+    height: 5px;
+    background-color: $RED_300;
+
+    &.line-a {
+      flex: 0 0 50px;
+    }
+
+    &.line-b {
+      flex: 10 0 0px;
+    }
+  }
+
+  .random-drinks-title {
+    flex: 1 1 0px;
+    min-width: 285px;
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    padding: 0 1rem;
+  }
+
+  .random-drinks-row {
+    display: flex;
+    justify-content: flex-start;
+    // flex-wrap: wrap;
+  }
+}

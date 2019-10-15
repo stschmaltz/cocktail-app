@@ -10,16 +10,9 @@ const HomePage = () => {
   return (
     <>
       <LandingSearchSection></LandingSearchSection>
-      <div>
-        <h1>Popular Drinks</h1>
+      <div className="home-page-container">
         <PopularDrinksSection></PopularDrinksSection>
-      </div>
-      <div>
-        <h1>Random Drinks</h1>
         <RandomDrinksSection></RandomDrinksSection>
-      </div>
-      <div>
-        <h1>Recently Added Drinks</h1>
         <RecentDrinksSection></RecentDrinksSection>
       </div>
     </>

@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+.drink-card-container {
+  border-radius: 5px;
+  box-shadow: $SHADOW_ELEVATION_ONE;
+  // min-width: 150px;
+  // max-width: 235px;
+  background-color: $OFF_WHITE_LIGHT;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  .drink-info-container {
+    
+    width: 100%;
+    padding: 1rem;
+  }
+.drink-info-name{
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', serif;
+
+}
+  .drink-image-img {
+    width: 100%;
+
+  }
+}

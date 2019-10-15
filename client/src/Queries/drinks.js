@@ -20,6 +20,7 @@ export const GET_RECENT_DRINKS = gql`
     recentDrinks {
       idDrink
       strDrink
+      strDrinkThumb
       strInstructions
       strCategory
       ingredients {
@@ -34,6 +35,7 @@ export const GET_POPULAR_DRINKS = gql`
   {
     popularDrinks {
       idDrink
+      strDrinkThumb
       strDrink
       strInstructions
       strCategory
@@ -49,6 +51,7 @@ export const GET_RANDOM_DRINKS = gql`
   {
     randomDrinks {
       idDrink
+      strDrinkThumb
       strDrink
       strInstructions
       strCategory
