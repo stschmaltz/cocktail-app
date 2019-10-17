@@ -1,3 +1,4 @@
+
 @import "../../variables.scss";
 
 .nav-bar-container {
@@ -17,6 +18,12 @@
     padding: 8px;
     font-size: 2rem;
     font-weight: 700;
+    text-shadow:
+    -1px -1px 0 #222,
+    1px -1px 0 #222,
+    -1px 1px 0 #222,
+    2px 1px 0 #222,
+    3px 3px 0 #222;
     a {
       color: $RED_300;
     }

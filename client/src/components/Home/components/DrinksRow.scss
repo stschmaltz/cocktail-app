@@ -1,0 +1,50 @@
+@import "../../../variables.scss";
+
+.drinks-section {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+
+  .drinks-header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .drinks-header-line {
+    height: 5px;
+    background-color: $RED_300;
+
+    &.line-a {
+      flex: 0 0 50px;
+    }
+
+    &.line-b {
+      flex: 10 0 0px;
+    }
+  }
+
+  .drinks-title {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    padding: 0 1rem;
+  }
+
+  .drinks-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .drink-link {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+
+    }
+  }
+}

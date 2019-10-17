@@ -14,6 +14,20 @@ export const GET_DRINK_BY_NAME = gql`
     }
   }
 `;
+export const GET_DRINK_BY_ID = gql`
+  query GET_DRINK_BY_ID($id: Int!) {
+    getDrinkById(id: $id) {
+      idDrink
+      strDrink
+      strInstructions
+      strCategory
+      ingredients {
+        name
+        measure
+      }
+    }
+  }
+`;
 
 export const GET_RECENT_DRINKS = gql`
   {
