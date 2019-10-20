@@ -8,7 +8,10 @@
   background-color: $OFF_WHITE_LIGHT;
   height: 100%;
   margin-bottom: 1rem;
+  @media only screen and (max-width: 600px) {
+    min-width: 30vw;
 
+  }
   .drink-info-container {
 
     width: 100%;

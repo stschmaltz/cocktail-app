@@ -9,6 +9,7 @@
     height: 4rem;
     display: flex;
     align-items: center;
+
   }
 
   .drinks-header-line {
@@ -17,17 +18,27 @@
 
     &.line-a {
       flex: 0 0 50px;
+
+      @media only screen and (max-width: 600px) {
+        flex: 0 0 30px;
+
+      }
     }
 
     &.line-b {
       flex: 10 0 0px;
     }
+
   }
 
   .drinks-title {
     font-family: $BITTER;
     font-weight: 700;
     padding: 0 1rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.8rem;
+    }
   }
 
   .drinks-row {
@@ -38,6 +49,8 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   }
 
   .drink-link {

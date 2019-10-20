@@ -1,23 +1,40 @@
 @import "../../variables.scss";
 
 .drink-page {
-  display: flex;
-  margin: auto;
-  max-width: 1000px;
-  margin-top: 6rem;
-  background-color: $OFF_WHITE_100;
-  // border: 3px solid $RED_200;
-  box-shadow: $SHADOW_ELEVATION_ONE;
-  padding: 2rem;
+  height: 100%;
+  padding-top: 6rem;
+  @media only screen and (max-width: 600px) {
+    padding: 0 0rem;
+    margin-top: 5rem;
+
+  }
+  .content-card {
+    display: flex;
+    margin: auto;
+    padding: 2rem;
+    position: relative;
+    padding-top: 6rem;
+    box-shadow: $SHADOW_ELEVATION_ONE;
+    max-width: 1000px;
+    background-color: $OFF_WHITE_100;
+    @media only screen and (max-width: 600px) {
+      flex-wrap: wrap;
+      padding: 2rem;
+      padding-top: 6rem;
+    }
+  }
 
   .drink-image-container {
-    min-width: 400px;
-    min-height: 400px;
-    max-width: 400px;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 500px;
 
-    max-height: 400px;
+    max-height: 500px;
     margin-right: 2rem;
-    position: relative;
+    @media only screen and (max-width: 600px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
 
   .drink-image-img {
@@ -29,12 +46,12 @@
   }
 
   .drink-info-container {
-    max-width: 600px;
+    max-width: 500px;
   }
 
 
   .drink-name-container {
-    background-color: rgba(222, 27, 27, 0.6);
+    background-color: rgba(222, 27, 27, 0.8);
     height: 60px;
     width: 100%;
     display: flex;
@@ -44,38 +61,50 @@
     margin: auto;
     left: 0;
     right: 0;
-    top: 1rem;
-    z-index: 100;
+    top: 0;
   }
 
   .drink-name-text {
     font-family: $BITTER;
-    color: $OFF_WHITE_800;
+    color: $OFF_WHITE_100;
+    text-shadow: 2px 2px #000;
   }
 
   .drink-instructions-container {
     font-family: $OPEN_SANS;
     display: flex;
-    
+    flex-direction: column;
+
   }
 
   .drink-ingredients-list {
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    border-right: 2px solid $RED_200;
-    padding-right: 2rem;
-    min-width: 200px;
+    min-width: fit-content;
   }
 
   .drink-ingredient-list-item {
-    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+
+  .drink-instructions-header {
+    margin-bottom: 1rem;
+    font-family: $BITTER;
+    color: $PRIMARY_TEXT;
+    font-size: 1.5rem;
   }
 
   .drink-ingredient-measure {}
 
   .drink-ingredient-name {}
-  .drink-instructions-paragraph-container{
-    max-width: 60%;
+
+  .drink-instructions-paragraph-container {
+    max-width: 350px;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid $RED_200;
+
   }
-  .drink-instructions-paragraph {}
+
+  .drink-instructions-paragraph {
+    line-height: 1.4;
+  }
 }

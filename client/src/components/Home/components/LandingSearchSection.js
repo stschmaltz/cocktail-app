@@ -8,7 +8,7 @@ const LandingSearchSection = props => {
   const [suggestions, setSuggestions] = useState([]);
 
   const inputProps = {
-    placeholder: "Search for a drink by name",
+    placeholder: "Search for cocktail by name",
     value,
     onChange: (event, { newValue }) => setValue(newValue)
   };

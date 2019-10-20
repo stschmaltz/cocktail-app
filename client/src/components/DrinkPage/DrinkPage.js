@@ -19,32 +19,42 @@ const DrinkPage = props => {
 
   return (
     <div className="drink-page">
-      <div className="drink-image-container">
-        <img
-          className="drink-image-img"
-          src={drink.strDrinkThumb}
-          alt={drink.strDrink + " thumbnail"}
-        />
+      <div className="content-card">
         <div className="drink-name-container">
           <h1 className="drink-name-text">{drink.strDrink}</h1>
         </div>
-      </div>
-      <div className="drink-info-container">
-        <div className="drink-instructions-container">
-          <ul className="drink-ingredients-list">
-            {drink.ingredients.map(ingredient => (
-              <li className="drink-ingredient-list-item" key={ingredient.name}>
-                <span className="drink-ingredient-measure">
-                  - {ingredient.measure && `${ingredient.measure} of `}
-                </span>
-                <span className="drink-ingredient-name">{ingredient.name}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="drink-instructions-paragraph-container">
-            <p className="drink-instructions-paragraph">
-              {drink.strInstructions}
-            </p>
+        <div className="drink-image-container">
+          <img
+            className="drink-image-img"
+            src={drink.strDrinkThumb}
+            alt={drink.strDrink + " thumbnail"}
+          />
+        </div>
+        <div className="drink-info-container">
+          <div className="drink-instructions-container">
+            <h3 className="drink-instructions-header">Ingredients</h3>
+            <ul className="drink-ingredients-list">
+              {drink.ingredients.map(ingredient => (
+                <li
+                  className="drink-ingredient-list-item"
+                  key={ingredient.name}
+                >
+                  <span className="drink-ingredient-measure">
+                    - {ingredient.measure && `${ingredient.measure} of `}
+                  </span>
+                  <span className="drink-ingredient-name">
+                    {ingredient.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="drink-instructions-paragraph-container">
+              <h3 className="drink-instructions-header">Instructions</h3>
+
+              <p className="drink-instructions-paragraph">
+                {drink.strInstructions}
+              </p>
+            </div>
           </div>
         </div>
       </div>

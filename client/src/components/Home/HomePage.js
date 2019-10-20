@@ -2,15 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./HomePage.scss";
 import DrinksRow from "./components/DrinksRow";
-
 import LandingSearchSection from "./components/LandingSearchSection";
 import {
   GET_POPULAR_DRINKS,
   GET_RECENT_DRINKS,
   GET_RANDOM_DRINKS
 } from "../../queries/drinks";
-
-
 
 const HomePage = () => {
   return (
@@ -28,7 +25,7 @@ const HomePage = () => {
           queryName="randomDrinks"
         />
         <DrinksRow
-          title="Recently Added Drinks"
+          title="Recently Added"
           query={GET_RECENT_DRINKS}
           queryName="recentDrinks"
         />
