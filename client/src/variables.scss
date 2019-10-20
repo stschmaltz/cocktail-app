@@ -14,7 +14,7 @@ $RED_100: #f5bbbb;
 $RED_200: #ef8d8d;
 $RED_300: #e85f5f;
 $RED_400: #e33d3d;
-$RED_500: #de1b1b;
+$RED_500: rgb(222, 27, 27);
 $RED_600: #da1818;
 $RED_700: #d51414;
 $RED_800: #d11010;
@@ -24,7 +24,7 @@ $YELLOW_LIGHT: #fbfbf0;
 $YELLOW_100: #f6f5d9;
 $YELLOW_200: #f0eec0;
 $YELLOW_300: #eae7a6;
-$YELLOW_400: #e6e293;
+$YELLOW_400: rgb(230, 226, 147);
 $YELLOW_500: #e1dd80;
 $YELLOW_600: #ddd978;
 $YELLOW_700: #d9d46d;
@@ -63,3 +63,7 @@ $SECONDARY_TEXT: rgba(0, 0, 0, 0.36);
 $SHADOW_ELEVATION_ONE: 0 1px 3px rgba(0, 0, 0, 0.12),
 0 1px 2px rgba(0, 0, 0, 0.24);
 $SHADOW_ELEVATION_HOVER: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+$SOURCE_SANS_PRO: 'Source Sans Pro', serif;
+$BITTER: 'Bitter', serif;
+$OPEN_SANS: 'Open Sans', serif;

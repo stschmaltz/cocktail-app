@@ -21,6 +21,7 @@ export const GET_DRINK_BY_ID = gql`
       strDrink
       strInstructions
       strCategory
+      strDrinkThumb
       ingredients {
         name
         measure
